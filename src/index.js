@@ -8,10 +8,11 @@ import "./less/index.less";
 
 // Kodlar buraya gelecek!
 
-const buttons = document.querySelectorAll(".btn");
-buttons[0].addEventListener("dblclick", () => {
-  buttons[0].style.backgroundColor = "black";
-  buttons[0].style.color = "white";
+document.querySelectorAll(".btn").forEach((e) => {
+  e.addEventListener("dblclick", () => {
+    e.style.backgroundColor = "black";
+    e.style.color = "white";
+  });
 });
 
 const baslik = document.querySelector("header");
@@ -27,5 +28,8 @@ icerik.addEventListener("copy", (e) => {
 
 const rota = document.querySelector("#rota");
 rota.addEventListener("mouseenter", () => {
-  rota.textContent = "Следующая станция: Macaristan";
+  rota.textContent = "Следующая станция: Венгрия.";
+});
+rota.addEventListener("mouseleave", () => {
+  rota.textContent = "Rotanızı Belirleyin";
 });
